@@ -9,12 +9,13 @@ Next, create a custom `/etc/portage/repos.conf` entry for the **gentoo-snappy** 
     # nano -w /etc/portage/repos.conf/gentoo-snappy.conf
 
 and put the following text in the file:
-# Make sure to update maintainer and sync-uri if ownership is transferred to original developer: Zygmunt "zyga" Krynicki (me@zygoon.pl)
+
 ```
 [gentoo-snappy]
  
 # An unofficial overlay that supports the installation of the "Snappy" backbone.
 # Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)
+# Make sure to update maintainer and sync-uri if ownership is transferred to original developer: Zygmunt "zyga" Krynicki (me@zygoon.pl)
  
 location = /usr/local/portage/gentoo-snappy
 sync-type = git
