@@ -17,7 +17,8 @@ DEPEND="sys-devel/automake
 	sys-devel/autoconf
 	dev-util/indent
 	sys-devel/make
-	sys-devel/gcc"
+	sys-devel/gcc
+	sys-libs/libapparmor"
 
 # Removed 'die' command because EAPI>=4
 src_configure() {
