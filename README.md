@@ -27,3 +27,7 @@ auto-sync = yes
 Then run:
 
     # emaint sync --repo gentoo-snappy
+
+## Packages
+### `sys-apps/snap-confine`
+Provides sandbox type isolation of individual snap packages.  This is a dependency of `snapd` proper.
