@@ -19,7 +19,7 @@ and put the following text in the file:
  
 location = /usr/local/portage/gentoo-snappy
 sync-type = git
-sync-uri = https://github.com/kefnab/gentoo-snappy.git
+sync-uri = https://github.com/zyga/gentoo-snappy.git
 priority = 50
 auto-sync = yes
 ```
