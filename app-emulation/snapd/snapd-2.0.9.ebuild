@@ -13,7 +13,7 @@ SRC_URI="https://github.com/snapcore/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}
 
 LICENSE="GPL3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64"
 
 RDEPEND="sys-apps/snap-confine::gentoo-snappy
 	sys-fs/squashfs-tools"
