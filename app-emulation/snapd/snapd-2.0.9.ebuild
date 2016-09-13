@@ -7,13 +7,20 @@ EAPI=6
 inherit golang-vcs-snapshot
 inherit systemd
 
+EGO_PN=github.com/snapcore/snapd
+EGO_SRC=github.com/snapcore/snapd/...
+EGIT_COMMIT="94c00688a7c479c8e95e45c5c3ab4bb6c0c7072e"
+
 DESCRIPTION="Service and tools for management of snap packages"
 HOMEPAGE="http://snapcraft.io/"
-SRC_URI="https://github.com/snapcore/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/snapcore/snapd/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+
+# mirrors are restricted for unofficial packages
+RESTRICT="mirrors"
 
 RDEPEND="sys-apps/snap-confine::gentoo-snappy
 	sys-fs/squashfs-tools"
@@ -22,11 +29,6 @@ DEPEND="${RDEPEND}
 	dev-vcs/git
 	dev-vcs/bzr"
 # Original ebuild had blank list of IUSE, so line was removed
-
-# No idea what this EGO and EGIT lines do yet...copied faithfully
-EGO_PN=github.com/snapcore/snapd
-EGO_SRC=github.com/snapcore/snapd/...
-EGIT_COMMIT="94c00688a7c479c8e95e45c5c3ab4bb6c0c7072e"
 
 # TODO: package all the upstream dependencies
 # TODO: ensure that used kernel supports xz compression for squashfs
