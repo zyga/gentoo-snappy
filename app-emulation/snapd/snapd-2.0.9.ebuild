@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 # mirrors are restricted for unofficial packages
 RESTRICT="mirrors"
 
-RDEPEND="sys-apps/snap-confine::gentoo-snappy
+RDEPEND="sys-apps/snap-confine
 	sys-fs/squashfs-tools"
 # Not sure if the runtime dependencies need to be duplicated in the build dependencies, but added them to be safe
 DEPEND="${RDEPEND}
