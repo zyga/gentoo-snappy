@@ -8,7 +8,7 @@ DESCRIPTION="The snap-confine program helps to launch snappy applications"
 HOMEPAGE="http://snapcraft.io/"
 SRC_URI="https://github.com/snapcore/${PN}/releases/download/${PV}/${P}.tar.gz"
 
-LICENSE="GPL3"
+LICENSE="GPL-3"
 SLOT="0"
 # Only have amd64 to test on
 KEYWORDS="~amd64"
