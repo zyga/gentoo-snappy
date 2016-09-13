@@ -13,22 +13,23 @@ SLOT="0"
 # Only have amd64 to test on
 KEYWORDS="~amd64"
 
-DEPEND="sys-devel/automake
+DEPEND="
+	dev-python/docutils
 	sys-devel/autoconf
-	dev-util/indent
-	sys-devel/make
+	sys-devel/automake
 	sys-devel/gcc
-	sys-libs/libapparmor"
+	sys-devel/make
+	virtual/libudev
+	"
 
 # Removed 'die' command because EAPI>=4
 src_configure() {
-	econf \
-		--host=${CHOST} \
-		--disable-confinement \
-		--enable-rootfs-is-core-snap \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man
+	econf --disable-apparmor
+}
+
+src_compile() {
+	emake || die "emake failed"
+	# check is broken in 1.0.40, will be fixed in .41
 }
 
 src_install() {
