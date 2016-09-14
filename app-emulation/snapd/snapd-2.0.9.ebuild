@@ -15,14 +15,14 @@ EGIT_COMMIT="f8324979be725e072d802a043bc7fe04c878693b"
 DESCRIPTION="Service and tools for management of snap packages"
 HOMEPAGE="http://snapcraft.io/"
 # rather than reference the git commit, it is better to src_uri to the package version (if possible) for future compatibility and ease of reading
-SRC_URI="https://github.com/snapcore/snapd/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/snapcore/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
 # mirrors are restricted for unofficial packages
-RESTRICT="mirrors"
+RESTRICT="mirror"
 
 RDEPEND="sys-apps/snap-confine
 	sys-fs/squashfs-tools"
