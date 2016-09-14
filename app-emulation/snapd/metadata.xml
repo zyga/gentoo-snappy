@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
- <email>me@zygoon.pl</email>
- <description>Zygmunt Krynicki, Canonical</description>
+<maintainer type="person">
+	<email>clayton.dobbs@gosecur.us</email>
+	<name>Clayton "kefnab" Dobbs</name>
+	<description>Performs gentoo package management</description>
 </maintainer>
+<upstream>
+	<maintainer type="person">
+		<email>me@zygoon.pl</email>
+		<name>Zygmunt "zyga" Krynicki</name>
+	</maintainer>
+	<bugs-to>mailto:me@zygoon.pl</bugs-to>
+	<doc>https://github.com/snapcore/snapd/tree/master/docs</doc>
+</upstream>
 </pkgmetadata>

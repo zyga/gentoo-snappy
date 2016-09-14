@@ -9,11 +9,13 @@ inherit systemd
 
 EGO_PN=github.com/snapcore/snapd
 EGO_SRC=github.com/snapcore/snapd/...
-EGIT_COMMIT="94c00688a7c479c8e95e45c5c3ab4bb6c0c7072e"
+# re-aligned COMMIT versioning to .ebuild package number
+EGIT_COMMIT="f8324979be725e072d802a043bc7fe04c878693b"
 
 DESCRIPTION="Service and tools for management of snap packages"
 HOMEPAGE="http://snapcraft.io/"
-SRC_URI="https://github.com/snapcore/snapd/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+# rather than reference the git commit, it is better to src_uri to the package version (if possible) for future compatibility and ease of reading
+SRC_URI="https://github.com/snapcore/snapd/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
