@@ -12,7 +12,7 @@ RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 # Only have amd64 to test on
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 DEPEND="dev-python/docutils
 	sys-devel/autoconf
