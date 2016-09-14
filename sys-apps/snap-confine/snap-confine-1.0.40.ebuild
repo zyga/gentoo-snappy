@@ -7,22 +7,24 @@ EAPI=6
 DESCRIPTION="The snap-confine program helps to launch snappy applications"
 HOMEPAGE="http://snapcraft.io/"
 SRC_URI="https://github.com/snapcore/${PN}/releases/download/${PV}/${P}.tar.gz"
-
+# Unofficial ebuild, so mirrors should not be checked for packages.
+RESTRICT="mirror"
 LICENSE="GPL-3"
 SLOT="0"
 # Only have amd64 to test on
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
-DEPEND="
-	dev-python/docutils
+DEPEND="dev-python/docutils
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/gcc
 	sys-devel/make
-	virtual/libudev
-	"
+	virtual/libudev"
 
-# Removed 'die' command because EAPI>=4
+# Note: Formerly, the || die construct had to be used after every command to check for errors. This is no longer necessary in EAPI 4 -
+# functions provided by Portage will die by themselves if something failed.
+# DIE WILL NOT WORK within a subshell or with external binaries.
+
 src_configure() {
 	econf --disable-apparmor
 }
