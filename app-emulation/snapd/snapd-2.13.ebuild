@@ -18,7 +18,6 @@ HOMEPAGE="http://snapcraft.io/"
 # non-standard versioning upstream makes package renaming (below) prudent
 SRC_URI="https://github.com/snapcore/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -27,7 +26,7 @@ KEYWORDS="~amd64"
 RESTRICT="mirror"
 
 RDEPEND="sys-apps/snap-confine
-	sys-fs/squashfs-tools"
+	sys-fs/squashfs-tools:*"
 # Not sure if the runtime dependencies need to be duplicated in the build dependencies, but added them to be safe
 DEPEND="${RDEPEND}
 	dev-vcs/git
