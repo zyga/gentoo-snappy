@@ -15,7 +15,7 @@ DESCRIPTION="Service and tools for management of snap packages"
 HOMEPAGE="http://snapcraft.io/"
 # rather than reference the git commit, it is better to src_uri to the package version (if possible) for future compatibility and ease of reading
 # non-standard versioning upstream makes package renaming (below) prudent
-SRC_URI="https://github.com/snapcore/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/snapcore/${PN}/archive/${PV}.tar.gz -> ${PF}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
