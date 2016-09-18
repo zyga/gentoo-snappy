@@ -79,3 +79,11 @@ pkg_postinst() {
 	systemctl enable snapd.socket
 	systemctl enable snapd.refresh.timer
 }
+
+# added package post-removal instructions for tidying up added services
+pkg_postrm() {
+	systemctl disable snapd.service
+	systemctl stop snapd.service
+	systemctl disable snapd.socket
+	systemctl disable snapd.refresh.timer
+}
