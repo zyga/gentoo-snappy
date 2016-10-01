@@ -6,9 +6,10 @@ EAPI=6
 
 DESCRIPTION="The snap-confine program helps to launch snappy applications"
 HOMEPAGE="http://snapcraft.io/"
-# Changed SRC_URI because recent update is not a 'releases' path
+# Changed SRC_URI because recent update is not a 'releases' path; as such package renaming becomes needed.
 # SRC_URI="https://github.com/snapcore/${PN}/releases/download/${PV}/${P}.tar.gz"
-SRC_URI="https://github.com/snapcore/${PN}/archive/${PV}.tar.gz"
+# non-standard versioning upstream makes package renaming (below) prudent
+SRC_URI="https://github.com/snapcore/${PN}/archive/${PV}.tar.gz -> ${PF}.tar.gz"
 # Unofficial ebuild, so mirrors should not be checked for packages.
 RESTRICT="mirror"
 LICENSE="GPL-3"
