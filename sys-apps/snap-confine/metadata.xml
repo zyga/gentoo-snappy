@@ -7,7 +7,7 @@
 	<description>Performs gentoo package management</description>
 </maintainer>
 <upstream>
-	<maintainer type="person">
+	<maintainer>
 		<email>me@zygoon.pl</email>
 		<name>Zygmunt "zyga" Krynicki</name>
 	</maintainer>
