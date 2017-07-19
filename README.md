@@ -1,7 +1,14 @@
 # gentoo-snappy
 An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone.
 
-## Add the Overlay
+## Add the Overlay using Layman ##
+
+If you manage your overlays with layman you can add it directly by pointing at the repo XML file:
+
+    #  layman -o https://raw.githubusercontent.com/zyga/gentoo-snappy/master/repositories.xml -f -a gentoo-snappy
+
+## Add the Overlay Manually ##
+
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` package installed.
 
 Next, create a custom `/etc/portage/repos.conf` entry for the **gentoo-snappy** overlay, so Portage knows what to do. Make sure that `/etc/portage/repos.conf` exists, and is a directory. Then, use your text editor without line wrapping:
