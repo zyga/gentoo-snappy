@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>gentoo-snappy</name>
+		<description>An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone.</description>
+		<homepage>https://github.com/zyga/gentoo-snappy.git</homepage>
+		<owner>
+			<email>me@zygoon.pl</email>
+		</owner>
+		<source type="git">https://github.com/zyga/gentoo-snappy.git</source>
+	</repo>
+</repositories>
