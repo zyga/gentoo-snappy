@@ -1,0 +1,14 @@
+diff --git a/cmd/autogen.sh b/cmd/autogen.sh
+index d3703ef..cb27d35 100755
+--- a/cmd/autogen.sh
++++ b/cmd/autogen.sh
+@@ -38,6 +38,9 @@ case "$ID" in
+ 	fedora|centos|rhel)
+ 		extra_opts="--libexecdir=/usr/libexec/snapd --with-snap-mount-dir=/var/lib/snapd/snap --enable-merged-usr --disable-apparmor"
+ 		;;
++	gentoo)
++		extra_opts="--libexecdir=/usr/lib/snapd --with-snap-mount-dir=/var/lib/snapd/snaps --enable-merged-usr --disable-apparmor --enable-caps-over-setuid"
++		;;
+ 	opensuse)
+ 		# NOTE: we need to disable apparmor as the version on OpenSUSE
+ 		# is too old to confine snap-confine and installed snaps
