@@ -2,31 +2,15 @@
 An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone.
 
 ## Add the Overlay
-Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` package installed.
+Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` and  `app-portage/layman` packages installed.
 
-Next, create a custom `/etc/portage/repos.conf` entry for the **gentoo-snappy** overlay, so Portage knows what to do. Make sure that `/etc/portage/repos.conf` exists, and is a directory. Then, use your text editor without line wrapping:
+Add the overlay:
 
-    # nano -w /etc/portage/repos.conf/gentoo-snappy.conf
+    # layman -o https://raw.githubusercontent.com/gentoomaniac/gentoo-snappy/master/gentoo-snappy.xml -f -a gentoo-snappy
 
-and put the following text in the file:
+Sync overlay:
 
-```
-[gentoo-snappy]
- 
-# An unofficial overlay that supports the installation of the "Snappy" backbone.
-# Maintainer: Clayton "kefnab" Dobbs (clayton.dobbs@gosecur.us)
-# Upstream Maintainer: Zygmunt "zyga" Krynicki (me@zygoon.pl)
- 
-location = /usr/local/portage/gentoo-snappy
-sync-type = git
-sync-uri = https://github.com/zyga/gentoo-snappy.git
-priority = 50
-auto-sync = yes
-```
-
-Then run:
-
-    # emaint sync --repo gentoo-snappy
+    # layman -S
 
 ## Packages
 ### `app-emulation/snapd`
@@ -38,7 +22,7 @@ Provides sandbox type isolation of individual snap packages.  This is a dependen
 ## Installation
 
     # emerge -av app-emulation/snapd
-    
+
 ## Post-installation
 
     # systemctl enable --now snapd.service
