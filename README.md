@@ -1,6 +1,13 @@
 # gentoo-snappy
 An unofficial Gentoo Overlay that enables installation of Canonical's "Snappy" backbone.
 
+## Prerequisite
+Snappy currently requires systemd based environment thus profile set for OpenRC (default to Gentoo) does not work.
+
+References:
+* https://wiki.gentoo.org/wiki/Systemd
+* https://github.com/zyga/gentoo-snappy/issues/10
+
 ## Add the Overlay
 Gentoo's currently preferred Overlay system is through using a git sync.  What follows are abbreviated instructions assuming that you already have the `dev-vcs/git` package installed.
 
@@ -39,6 +46,6 @@ Provides sandbox type isolation of individual snap packages.  This is a dependen
 
     # emerge -av app-emulation/snapd
     
-## Post-installation
+## Post-installation (systemd)
 
     # systemctl enable --now snapd.service
